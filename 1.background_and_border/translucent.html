@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translucent</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+	div.main{
+		width: 300px;
+		height: 300px;
+		background-image: url("./yuqqq.jpg");
+		align-content: center;
+	}
+
+	div.sub{
+		width: 200px;
+		height: 200px;
+		border:10px solid hsla(0,0%,100%,.5);
+		background: white;
+		background-clip: padding-box;
+	}
+
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="sub">
+			<p>This is a test for semi transport..</p>
+		</div>
+	</div>
+	<p>默认状态下背景会延伸到边框下层区域，所以用内边距的外沿去除背景<br>
+	关键字   background-clip:padding-box</p>
+</body>
+</html>
+
