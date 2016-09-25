@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translucent</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+	#main{
+		margin:40px auto;
+		width:200px;
+		height:200px;
+		background:yellowgreen;
+		box-shadow:0 0 0 10px #655,0 0 0 15px deeppink,
+0 2px 5px 15px rgba(0,0,0,.6);
+	}
+
+	#sub{
+		margin:40px auto;
+		width:200px;
+		height:200px;
+		background:yellowgreen;	
+		border:10px solid #655;
+		outline:5px solid deeplink;
+		border-radius:10px;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="main"></div>
+	<div id="sub"></div>
+	<p>Box-shadow支持多重边框,不影响布局和交互事件</p>
+	<p>Outline在firefox下是无效属性</p>	
+</body>
+</html>
