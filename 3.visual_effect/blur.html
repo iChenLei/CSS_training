@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blur</title>
+	<style type="text/css">
+		#main{
+			width: 200px;
+			height: 200px;
+			background:url("./yuqqq.jpg");
+		}
+		#sub{
+			width: 200px;
+			height: 200px;
+			background: hsla(0,0%,100%,.3);
+			position: relative;
+			color: yellow;
+		}
+
+		#sub::before{
+			background:url("./yuqqq.jpg");
+			filter:blur(2px);
+			top: 0;right: 0;bottom:0;left: 0;
+			content: '';
+			position: absolute;
+
+		}
+	</style>
+</head>
+<body>
+   <div id="main">
+   		<div id="sub">
+   			<p>Hello,chenlei</p>
+   			<p>This is a text page</p>
+   		</div>
+   </div>
+</body>
+</html>
