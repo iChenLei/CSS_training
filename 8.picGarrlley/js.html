@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+	<style type="text/css">
+		body{
+			color: #333;
+			font-family: "Arial",serif;
+			background-color: #ccc;
+			margin:  1em 10%;
+		}
+
+		h1{
+			color: #333;
+			background-color: transparent;
+		}
+
+		a{
+			color: #c60;
+			background-color: transparent;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		ul{
+			padding: 0;
+		}
+
+		li{
+			float: left;
+			padding: 1em;
+			list-style: none;
+		}
+		img{
+			display: block;
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<h1>Snapshots</h1>
+	<ul>
+		<li>
+			<a href="./1.jpg" title="black bikini" onclick="showPic(this);return false"> Black bikini</a>
+		</li>
+		<li>
+			<a href="./2.jpg" title="White bikini" onclick="showPic(this);return false"> White bikini</a>
+		</li>
+		<li>
+			<a href="./3.jpg" title="Red bikini" onclick="showPic(this);return false"> Red bikini</a>
+		</li>
+		<li>
+			<a href="./4.jpg" title="Blue bikini" onclick="showPic(this);return false"> Blue bikini</a>
+		</li>
+	</ul>
+		<img id="placeholder" src="./bg.jpg" alt="my image gallery">
+		<p id="desc">Choose an image.</p>
+
+		<script type="text/javascript" src="./js.js"></script>
+</body>
+</html>
