@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css dom</title>
+</head>
+<body>
+	<h1>Hello world</h1>
+	<p id="example" style="color:red;font-family:'Arial';">
+		An example of paragraph
+	</p>
+
+	<script type="text/javascript">
+		function getNextElement(node){
+			// console.log(node.nodeType);
+			if(node.nodeType == 1){
+				return node;
+			}
+			if(node.nextSibling){
+				return getNextElement(node.nextSibling);
+			}
+			return null;
+		}
+
+		var head = document.getElementsByTagName("h1");
+		console.log(head[0].nextSibling);
+		console.log(head[0].nextSibling.nextSibling);
+		var elem = getNextElement(head[0].nextSibling);
+		elem.style.color = "yellow";
+
+	</script>
+</body>
+</html>

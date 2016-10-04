@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Abbr</title>
+	<style type="text/css">
+		body{
+			font-family: "Helvetica","Arial",sans-serif;
+			font-size: 10pt;
+		}
+		abbr{
+			text-decoration: none;
+			border:0;
+			font-style: normal;
+		}
+	</style>
+</head>
+<body>
+	<h1>What is the document object model?</h1>
+	<p>
+		The <abbr title="World wide web consortium">W3C</abbr> defines the <abbr title="Document Object Model">DOM</abbr> as:
+	</p>
+
+	<blockquote cite="Http://www.w3.org/DOM/">
+		<p>A platform and language-neutral interface that will allow.</p>
+	</blockquote>
+
+	<p>
+		It's an <abbr title="Apllication Programming Interface">API</abbr> that can be used to navigated <abbr title="HyperText Markup language">HTML</abbr> documnets.
+	</p>
+	<script type="text/javascript">
+
+	function displayabbr() {
+		var abbrs = document.getElementsByTagName("abbr");
+		if(abbrs.length < 1) return false;
+		var defs = new Array();
+		for(var i = 0; i < abbrs.length ;i++) {
+			var def = abbrs[i].getAttribute("title");
+			var key = abbrs[i].lastChild.nodeValue;
+			defs[key] = def;
+		}
+		var dlist = document.createElement("dl");
+		for(key in defs){
+			var def = defs[key];
+			var dtitle = document.createElement("dt");
+			var dtitle_text = document.createTextNode(key);
+			dtitle.appendChild(dtitle_text);
+
+			var ddesc = document.createElement("dd");
+			var ddesc_text = document.createTextNode(def);
+			
+			ddesc.appendChild(ddesc_text);
+			
+			dlist.appendChild(dtitle);
+			dlist.appendChild(ddesc);
+		}
+
+		// console.log(dlist);
+
+		var header = document.createElement("h2");
+		var header_text = document.createTextNode("Abbreviations");
+		header.appendChild(header_text);
+
+		document.body.appendChild(header);
+		document.body.appendChild(dlist);
+	}
+
+	function displayCit(){
+		var quotes = document.getElementsByTagName("blockquote");
+		for(var i = 0;i<quotes.length;i++){
+			if(!quotes[i].getAttribute("cite")) continue;
+			var url = quotes[i].getAttribute("cite");
+			var quoteChildren = quotes[i].getElementsByTagName("*");
+			if(quoteChildren.length<1) continue;
+
+			var elem = quoteChildren[quoteChildren.length-1];
+
+			console.log(elem);
+
+			var link = document.createElement("a");
+			var link_text = document.createTextNode("source");
+			link.appendChild(link_text);
+			link.setAttribute("href",url);
+
+			var superscript = document.createElement("sup");
+			superscript.appendChild(link);
+			elem.appendChild(superscript);
+		}
+	}
+
+	displayCit();
+	// window.onload = displayabbr;
+	// console.log(window.load);
+	// var oldload = window.onload;
+	// console.log(typeof oldload);
+		
+	</script>
+</body>
+</html>

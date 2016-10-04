@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Table</title>
+	<style type="text/css">
+		body{
+			font-family: "Helvetica";
+			background-color: #fff;
+			color: #000;
+		}
+		table{
+			margin:0 auto;
+			border:1px solid #699;
+		}
+		caption{
+			margin:0 auto;
+			padding: .2em;
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+		th{
+			font-weight: normal;
+			font-style: italic;
+			text-align: left;
+			border: 1px dotted #699;
+			background-color: #9cc;
+			color: #000;
+		}
+		th,td{
+			width: 10em;
+			padding: .5em;
+		}
+		tr:nth-child(odd){background-color: #ffc}
+		tr:nth-child(even){background-color: #fff}
+		tr:hover{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+  	<table>
+  		<caption>Itinerary</caption>
+  		<thead>
+  			<tr>
+  				<th>When</th>
+  				<th>Where</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  				<td>June 9th</td>
+  				<td>Portland</td>
+  			</tr>
+  			<tr>
+  				<td>June 19th</td>
+  				<td>Seattle</td>
+  			</tr>
+  			<tr>
+  				<td>June 29th</td>
+  				<td>New York</td>
+  			</tr>
+  		</tbody>
+  	</table>
+</body>
+</html>
