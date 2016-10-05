@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Choose</title>
+	<style type="text/css">
+		#slideshow{
+			width: 50px;
+			height: 220px;
+			position: relative;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<h1>web design</h1>
+	<p>These are the things you should know.</p>
+	<ol id="linklist">
+		<li>
+			<a href="s.html">Bogut</a>
+		</li>
+		<li>
+			<a href="p.html">S.curry</a>
+		</li>
+		<li>
+			<a href="b.html">Klay.thompsen</a>
+		</li>
+	</ol>
+	<div id="slideshow">
+		<img src="./pic.jpg" alt="building blocks of web design" id="preview">
+	</div>
+	<script type="text/javascript">
+		function preSlideshow(){
+			var preview = document.getElementById("preview");
+			preview.style.position = "absolute";
+			preview.style.left = "0px";
+			preview.style.top = "0px";
+		}
+
+		preSlideshow();
+		function move(){
+				var pic = document.getElementById("preview");
+				var xpos = parseInt(pic.style.left);
+				var ypos = parseInt(pic.style.top);
+				if(xpos != -100){
+					xpos = xpos - 10;
+				}
+				pic.style.left = xpos+"px";
+				
+			}
+		var klay = document.getElementById("linklist").getElementsByTagName("a");
+		klay[2].onmouseover = function(){
+			setTimeout("move()",100);
+		}
+	</script>
+</body>
+</html>

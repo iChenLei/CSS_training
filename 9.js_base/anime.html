@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anime</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+	<p id="message">Wheel...</p>
+	<script type="text/javascript">
+		function moveMessage(){
+			var elem = document.getElementById("message");
+			console.log(elem.style.left);
+			var xpos = parseInt(elem.style.left);
+			var ypos = parseInt(elem.style.top);
+			console.log(xpos);
+		}
+
+		moveMessage();
+	</script>
+</body>
+</html>
