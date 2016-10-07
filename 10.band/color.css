@@ -1,0 +1,10 @@
+nav a{
+	color: red;
+	text-decoration: none;
+}
+
+nav li{
+	list-style: none;
+	float: left;
+	margin-right: 10px;
+}
